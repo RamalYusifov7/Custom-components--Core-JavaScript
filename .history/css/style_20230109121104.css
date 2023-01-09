@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #f89828;
+  --transition: 0.4s ease all;
+}
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+}
+/* Preloader                 */
+.preloader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: visible;
+  z-index: 9999999;
+}
+.preloader.hide {
+  visibility: hidden;
+  z-index: -999999;
+}
+/*         MENU                   */
+.logo {
+  width: 60px;
+  height: 60px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-header {
+  padding: 12px 0;
+}
+.main-header > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #1e212c;
+  padding: 23px 16px;
+  transform: translateX(-100%);
+  z-index: 9999;
+  transition: var(--transition);
+}
+.sidebar.show {
+  transform: translateX(0);
+}
+.sidebar-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.sidebar-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: var(--transition);
+}
+.sidebar-list li {
+  margin-bottom: 12px;
+}
+.sidebar-list li a:hover {
+  color: var(--primary);
+}
+.sidebar-title {
+  color: white;
+  font-size: 32px;
+  margin: 0;
+}
+.button-unstyled {
+  background-color: transparent;
+  border: none;
+}
+.close-icon i {
+  color: white;
+  font-size: 24px;
+}
+.menu-icon i {
+  font-size: 24px;
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.sidebar-wrapper.active {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.525);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+/* Home banner */
+.page-banner {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+.banner-img {
+  height: 400px;
+  overflow: hidden;
+}
+.banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.banner-slider-btns button {
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  font-size: 24px;
+}
+.banner-slider-btns .prev-btn {
+  display: none;
+  left: 6px;
+}
+.banner-slider-btns .next-btn {
+  right: 6px;
+}
+.banner-container {
+  min-height: 400px;
+  overflow: hidden;
+}
+.banner-img {
+  position: absolute;
+  width: 100%;
+  transition: 0.5s ease-in-out all;
+}
+
+/*                          validation                       */
+
+.validation-container {
+  max-width: 700px;
+  margin: auto;
+}
+.contact-form-item input {
+  width: 100%;
+  height: 44px;
+  outline: none;
+  padding-left: 8px;
+  margin-top: 4px;
+}
+.contact-form-item {
+  margin-bottom: 24px;
+}
+.error-message,
+.password-error-message,
+.commit-password-error-message {
+  font-size: 12px;
+  color: red;
+  margin-top: 4px;
+  display: none;
+}
+.success-message {
+  font-size: 12px;
+  color: green;
+  margin-top: 4px;
+  display: none;
+}
+.contact-form-item.error .error-message {
+  display: block;
+}
+.contact-form-item.success .success-message {
+  display: block;
+}
+.submit-btn {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 4px;
+  border: 1px solid var(--primary);
+  min-width: 80px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+.submit-btn:hover {
+  background-color: white;
+  color: var(--primary);
+}
+/* Calculator */
+.calculator-section {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+.calculator-container {
+  max-width: 300px;
+  margin: auto;
+}
+.calculation-btns button {
+  border: 1px solid var(--primary);
+  width: 100%;
+  margin-bottom: 2px;
+  background-color: white;
+  color: var(--primary);
+  font-weight: 700;
+  transition: var(--transition);
+}
+.calculation-btns button:not(.number-btn) {
+  background-color: var(--primary);
+  color: white;
+}
+
+.calculation-btns button:hover {
+  background-color: white;
+  color: var(--primary);
+}
+.calculation-btns .row > * {
+  padding: 0 2px;
+}
+.calculation-btns .row {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+.calculation-result {
+  border: 1px solid var(--primary);
+  height: 60px;
+  padding: 4px 6px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: var(--primary);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Accordion */
+.faq-section {
+  padding: 80px 0 180px;
+}
+
+.accordion {
+  display: flex;
+}
+.accordion-left {
+  width: 10%;
+  padding: 0 15px;
+}
+.accordion-right {
+  width: 90%;
+  padding: 0 15px;
+}
+h3 {
+  margin: 0;
+}
+.accordion-content {
+  display: none;
+}
+.collapsed .accordion-content {
+  display: block;
+}
+.minus-icon {
+  display: none;
+}
+.collapsed .plus-icon {
+  display: none;
+}
+.collapsed .minus-icon {
+  display: block;
+}
+.accordion-btn {
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-size: 20px;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: black;
+}

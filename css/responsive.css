@@ -1,0 +1,8 @@
+@media (min-width: 1499px) {
+  .prev-btn {
+    left: 30px;
+  }
+  .next-btn {
+    right: 30px;
+  }
+}
