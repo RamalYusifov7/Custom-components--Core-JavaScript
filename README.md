@@ -1,0 +1,1 @@
+Developed some of the boootstrap components using HTML,CSS and JavasScrip such as Menu,Carousel,Validation,Accardion. I have also shown a simple calculator in this repo which I built with pure JavaScript
